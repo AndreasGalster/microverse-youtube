@@ -56,3 +56,60 @@ input {
 #subheadline p {
     flex-grow: 1;
 }
+
+.comment-input{
+    display: grid;
+    grid-template-columns : 64px 1fr;
+    grid-template-areas: "avatar comment";
+}
+
+.avatar{
+    border-radius: 50%;
+    grid-area: avatar;
+    background: #fc0;
+    height: 64px;
+    width: 64px;
+}
+.input{
+
+    grid-area: comment;
+    background: #fefefe;
+    padding: 1rem;
+}
+
+.comment-list{
+
+    margin-top: 2rem;
+    grid-column-end: span 2;
+
+}
+
+.comment-item{
+
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    grid-template-areas: 
+    "avatar comment"
+    "meta meta";
+    background: rgba(red, green, blue, alpha);
+    padding: 1rem;
+}
+
+.comment{
+    grid-area: comment;
+    padding: 1rem;
+}
+
+.meta{
+
+    grid-area: meta;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    font-size: 12px;
+}
+
+.comment-item > .comment-list {
+
+    padding-left: 2rem;
+}
